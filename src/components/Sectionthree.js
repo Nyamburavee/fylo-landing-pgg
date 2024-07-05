@@ -2,10 +2,28 @@ import React from "react";
 import { useState } from "react";
 
 const Sectionthree = () =>{
-    const [mail, setMail] = useState (' ')
+    const [mail, setMail] = useState ('');
+    const [errortext, setErrorText] = useState('');
+
+    const verifyEmial = (mail) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(mail);
+
+
+    };
+
 
     const handlemail = (e) =>{
-        setMail(e.target.value)
+        const email = e.target.value.trim();
+        setMail(email);
+
+        if(!verifyEmial (e.target.value)) {
+            setErrorText('please check you email');
+
+        }
+        else {
+            setErrorText('')
+        };
     }
     return(
         <div className=" flex flex-col  bg-desaturatedBlue pb-36 lg:flex-row lg:p-20 ">
@@ -26,13 +44,14 @@ const Sectionthree = () =>{
                         value={mail}
                         onChange={handlemail}
                         required
-                        className=" bg-white w-96  rounded-md p-3 lg:rounded-sm lg:p-2" 
+                        className= {`bg-white w-96  rounded-md p-3 border lg:rounded-sm lg:p-2 ${ errortext ? 'border-red-500': 'border-gray-400'}`}
 
                         />
+                        {errortext && <p className=" text-white"> {errortext}</p>}
                     </div>
 
                     <div>
-                        <button className=" text-white bg-brightBlue mt-1 p-3 rounded-md text-lg font-bold
+                        <button type="submit" className=" text-white bg-brightBlue mt-1 p-3 rounded-md text-lg font-bold
                          lg:mt-0 w-96 lg:w-56 lg:p-1 lg:rounded-sm
                         ">Get Started For Free</button>
                     </div>

@@ -23,10 +23,10 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-col items-start mt-16 text-2xl lg:text-sm lg:mt-0">
-                    <h3 className="mb-5">About Us</h3>
-                    <h3 className="mb-5">Jobs</h3>
-                    <h3 className="mb-5">Press</h3>
-                    <h3>Blog</h3>
+                    <h3 className="mb-5 hover:text-desaturatedBlue cursor-pointer">About Us</h3>
+                    <h3 className="mb-5 hover:text-desaturatedBlue cursor-pointer">Jobs</h3>
+                    <h3 className="mb-5 hover:text-desaturatedBlue cursor-pointer">Press</h3>
+                    <h3 className=" hover:text-desaturatedBlue cursor-pointer">Blog</h3>
                 </div>
 
                 <div className="flex flex-col items-start mt-16 text-2xl lg:text-sm lg:mt-0">
@@ -42,7 +42,7 @@ const Footer = () => {
                     </a>
 
                     <a href="https://instagram.com" className="flex text-white justify-center items-center rounded-full border
-                     border-white h-12 w-12 lg:h-10 lg:w-10">
+                     border-white h-12 w-12 lg:h-10 lg:w-10 cursor-pointer">
                         <FaInstagram className="h-6" />
                     </a>
 

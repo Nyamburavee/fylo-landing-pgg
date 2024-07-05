@@ -17,7 +17,7 @@ const Sectiontwo = () => {
                    lg:text-lg lg:font-bold ">Securely share files and folders with friends, family and colleagues
                 for live collaborations. No file attachments required!</h2>
 
-                <div className=" flex flex-row justify-center text-moderateCyan text-lg lg:justify-start  ">
+                <div className=" flex flex-row justify-center text-moderateCyan text-lg lg:justify-start cursor-pointer ">
                     <a href="#"> See how fylo works</a>
                     
                     
